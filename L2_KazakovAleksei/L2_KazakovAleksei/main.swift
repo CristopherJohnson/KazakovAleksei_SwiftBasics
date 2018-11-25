@@ -19,5 +19,18 @@ func evenNumbers(comparingNumber number: Int) -> Bool{
     }
 }
 
-let testNumber = evenNumbers(comparingNumber: 6)
+var testNumber = evenNumbers(comparingNumber: 5)
+print(testNumber)
+
+//Task 2
+
+func multiplesOf3 (comparingNumber number: Int) -> Bool{
+    if (number % 3) == 0{
+        return true
+    } else {
+        return false
+    }
+}
+
+testNumber = multiplesOf3(comparingNumber: 8)
 print(testNumber)
