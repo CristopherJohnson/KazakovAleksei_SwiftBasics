@@ -99,5 +99,27 @@ var fibonacci = fibonacciBine(numberIfElements: 100)
 print(fibonacci)
 print(fibonacci.count)
 
+//Task 6
 
+func primeNumbersArray (amountOfNumbers: Int) -> [Int]{
+    var array:[Int] = []
+    var number = 3
+    while array.count < amountOfNumbers {
+        var isPrime: Bool = true
+        for n in 2..<number{
+            if number % n == 0{
+                isPrime = false
+                break
+            }
+        }
+        if isPrime == true {
+            array.append(number)
+        }
+        number += 1
+    }
+    return array
+}
+
+let primeArray = primeNumbersArray(amountOfNumbers: 100)
+print(primeArray)
 
