@@ -78,4 +78,26 @@ print(arrayInt)
 arrayInt = removeMultiplesTo(multipleNumber: 3, arrayInt)
 print(arrayInt)
 
+//Task 5
+
+// Я сдаюсь. Делаю с помощью формулы Бине. Не смог придумать, как вытащить из строки число, чтобы не перегружать код.
+// Если подскажите, как работает NSNumber и можно ли с помощью него преобразовать строку с цифрами в число - буду благодарен
+
+func fibonacciBine (numberIfElements number: Int) -> [String]{
+    var fibonacciArray: [String] = []
+    let index:Double = sqrt(5)
+    let leftPart:Double = (1 + index) / 2
+    let rightPart:Double = (1 - index) / 2
+    for n in 0..<number{
+        let fibonacciNumber = String(format: "%.2f", ((pow(leftPart, Double(n)) - pow(rightPart, Double(n))) / index))
+        fibonacciArray.append(fibonacciNumber)
+    }
+    return fibonacciArray
+}
+
+var fibonacci = fibonacciBine(numberIfElements: 100)
+print(fibonacci)
+print(fibonacci.count)
+
+
 
