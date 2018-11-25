@@ -19,8 +19,8 @@ func evenNumbers(comparingNumber number: Int) -> Bool{
     }
 }
 
-var testNumber = evenNumbers(comparingNumber: 5)
-print(testNumber)
+var testNumberBool = evenNumbers(comparingNumber: 5)
+print(testNumberBool)
 
 //Task 2
 
@@ -32,5 +32,13 @@ func multiplesOf3 (comparingNumber number: Int) -> Bool{
     }
 }
 
-testNumber = multiplesOf3(comparingNumber: 8)
-print(testNumber)
+testNumberBool = multiplesOf3(comparingNumber: 8)
+print(testNumberBool)
+
+// Task 3
+
+var arrayInt: [Int] = []
+for i in 1...100{
+    arrayInt.append(i)
+}
+print(arrayInt)
