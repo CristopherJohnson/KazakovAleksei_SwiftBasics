@@ -41,4 +41,21 @@ var arrayInt: [Int] = []
 for i in 1...100{
     arrayInt.append(i)
 }
+//print(arrayInt)
+
+//Task4
+
+for value in arrayInt{
+    if (value % 2) == 0{
+        arrayInt.remove(at: arrayInt.index(of: value)!)
+    }
+}
+print(arrayInt)
+
+for value in arrayInt{
+    if (value % 3) == 0{
+        arrayInt.remove(at: arrayInt.index(of: value)!)
+    }
+}
+
 print(arrayInt)
