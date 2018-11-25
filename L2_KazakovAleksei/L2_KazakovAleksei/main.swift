@@ -45,17 +45,37 @@ for i in 1...100{
 
 //Task4
 
-for value in arrayInt{
-    if (value % 2) == 0{
-        arrayInt.remove(at: arrayInt.index(of: value)!)
+// Альтернативный вариант решения
+//for value in arrayInt{
+//    if (value % 2) == 0{
+//        arrayInt.remove(at: arrayInt.index(of: value)!)
+//    }
+//}
+//print(arrayInt)
+//
+//for value in arrayInt{
+//    if (value % 3) == 0{
+//        arrayInt.remove(at: arrayInt.index(of: value)!)
+//    }
+//}
+//
+//print(arrayInt)
+
+
+func removeMultiplesTo (multipleNumber number: Int, _ arrayInt: [Int]) -> [Int] {
+    var finalArray = arrayInt
+    for value in finalArray{
+        if (value % number) == 0{
+            finalArray.remove(at: finalArray.index(of: value)!)
+        }
     }
+    return finalArray
 }
+
+arrayInt = removeMultiplesTo(multipleNumber: 2, arrayInt)
 print(arrayInt)
 
-for value in arrayInt{
-    if (value % 3) == 0{
-        arrayInt.remove(at: arrayInt.index(of: value)!)
-    }
-}
-
+arrayInt = removeMultiplesTo(multipleNumber: 3, arrayInt)
 print(arrayInt)
+
+
